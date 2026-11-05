@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin sign in · Stories I Wore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Manrope:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <script type="module" src="../js/pages/admin-login.js"></script>
+</head>
+<body class="admin">
+  <main class="login-page">
+    <form class="card login-card" id="login-form" novalidate>
+      <span class="logo">Stories I Wore<span>.</span></span>
+      <h1>Admin sign in</h1>
+      <div class="messages" id="messages"></div>
+      <label class="field">Email
+        <input type="email" id="email" autocomplete="username" required>
+      </label>
+      <label class="field">Password
+        <input type="password" id="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn" type="submit" id="submit">Log in</button>
+    </form>
+  </main>
+</body>
+</html>

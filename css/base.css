@@ -1,0 +1,129 @@
+/* =====================================================================
+   Stories I Wore: shared styles (used by every page)
+   Colours and fonts come from the mockup style guide.
+   ===================================================================== */
+
+:root {
+  --plum: #9E4F64;        /* dusty rose: buttons, links */
+  --plum-dark: #7F3D50;   /* button hover */
+  --ink: #3A2E33;         /* main text: soft charcoal, not black */
+  --muted: #6F6266;       /* secondary text */
+  --blush: #F5E8EA;       /* soft panels, header bar, footer, sidebar */
+  --blush-soft: #FCF6F7;  /* very light background */
+  --marigold: #D9A15A;    /* small accents */
+  --line: #EADFE2;
+  --field-line: #E3D5D9;
+
+  --ok-bg: #E3F1E9;   --ok: #1F5A3D;
+  --warn-bg: #FCEFD6; --warn: #7A4A00;
+  --sold-bg: #EEEAEC; --sold: #4A4046;
+  --error-bg: #FBE4E2; --error: #B3261E;
+
+  --display: 'Bodoni Moda', Georgia, 'Times New Roman', serif;
+  --body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--plum); }
+a:hover { color: var(--ink); }
+
+:focus-visible { outline: 3px solid var(--marigold); outline-offset: 2px; }
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.logo span { color: var(--marigold); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 0 26px;
+  border-radius: 999px; border: 1.5px solid var(--plum);
+  background: var(--plum); color: #fff;
+  font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+}
+.btn:hover { background: var(--plum-dark); border-color: var(--plum-dark); color: #fff; }
+.btn-secondary { background: #fff; color: var(--plum); }
+.btn-secondary:hover { background: var(--blush); color: var(--plum); border-color: var(--plum); }
+.btn-danger { background: #fff; color: var(--error); border-color: var(--error); }
+.btn-danger:hover { background: var(--error-bg); color: var(--error); border-color: var(--error); }
+.btn-small { min-height: 40px; padding: 0 16px; font-size: 14px; }
+.btn[disabled] { opacity: .55; cursor: not-allowed; }
+
+.link-button {
+  font: inherit; font-weight: 700; color: var(--plum);
+  background: none; border: 0; padding: 0; min-height: 44px;
+  text-decoration: underline; cursor: pointer;
+}
+
+/* ---------- Form fields ---------- */
+.field { display: flex; flex-direction: column; gap: 6px; font-weight: 700; font-size: 14px; min-width: 0; }
+.field input, .field select, .field textarea {
+  font: inherit; font-weight: 400; font-size: 16px;
+  min-height: 48px; padding: 0 14px;
+  border: 1.5px solid var(--field-line); border-radius: 12px;
+  background: #fff; color: var(--ink); width: 100%;
+}
+.field textarea { padding: 12px 14px; min-height: 120px; resize: vertical; }
+.field .hint { font-weight: 400; color: var(--muted); font-size: 13px; }
+.field .error { color: var(--error); font-weight: 600; font-size: 13px; }
+.field.has-error input, .field.has-error select, .field.has-error textarea { border-color: var(--error); }
+
+/* ---------- Messages ---------- */
+.message { margin: 0; padding: 12px 16px; border-radius: 12px; font-weight: 600; }
+.message.ok { background: var(--ok-bg); color: var(--ok); }
+.message.error { background: var(--error-bg); color: var(--error); }
+.message.info { background: var(--blush); color: var(--plum); }
+.messages:empty { display: none; }
+
+/* ---------- Status chips ---------- */
+.chip { display: inline-flex; align-items: center; border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 700; }
+.chip-available { background: var(--ok-bg); color: var(--ok); }
+.chip-reserved { background: var(--warn-bg); color: var(--warn); }
+.chip-sold { background: var(--sold-bg); color: var(--sold); }
+
+/* ---------- Photos ---------- */
+.photo {
+  width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
+  border-radius: var(--radius); background: var(--blush);
+}
+.photo-missing {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 13px;
+}
+
+.loading { color: var(--muted); }
