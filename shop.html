@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop · Stories I Wore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Manrope:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/store.css">
+  <script type="module" src="js/pages/shop.js"></script>
+</head>
+<body>
+  <div class="announce">Every piece is one of a kind · Pickup or delivery · Pay when we confirm</div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Stories I Wore<span>.</span></a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="story.html">Our Story</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Shop</span></nav>
+      <h1 id="shop-title">All pieces</h1>
+    </div>
+
+    <div class="messages" id="messages"></div>
+
+    <div class="shop-layout">
+      <form class="filters" id="filters" aria-label="Filters">
+        <label class="field">Search
+          <input type="search" id="search" placeholder="Silk, floral, linen…" autocomplete="off">
+        </label>
+        <label class="field">Category
+          <select id="category"><option value="">All categories</option></select>
+        </label>
+        <label class="field">Size
+          <select id="size"><option value="">All sizes</option></select>
+        </label>
+        <label class="field">Condition
+          <select id="condition">
+            <option value="">Any condition</option>
+            <option>New with tags</option>
+            <option>Like new</option>
+            <option>Good</option>
+            <option>Fair</option>
+          </select>
+        </label>
+        <label class="field">Sort
+          <select id="sort">
+            <option value="newest">Newest first</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+        <button type="reset" class="link-button">Clear all filters</button>
+      </form>
+
+      <section class="shop-results" aria-label="Results">
+        <div class="results-bar"><span id="count" role="status">Loading pieces…</span></div>
+        <div class="product-grid" id="grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="logo">Stories I Wore<span>.</span></span>
+      <nav aria-label="Footer">
+        <a href="shop.html">Shop</a>
+        <a href="story.html">Our Story</a>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.facebook.com/">Facebook</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
